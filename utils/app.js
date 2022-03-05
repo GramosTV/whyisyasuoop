@@ -141,7 +141,7 @@ class YasuoStatCalculator {
 
         }
         this.itemIds = this.bestItems.map(e => e[0])
-
+        console.log(this.itemIds)
         return {
             itemIds: this.itemIds,
             yasuoDamage,
