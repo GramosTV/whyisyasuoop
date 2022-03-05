@@ -1,0 +1,95 @@
+* {
+    font-family: arial;
+    text-align: center;
+}
+.container {
+ display: flex;
+justify-content: space-around;
+align-items: flex-start;
+}
+.item_container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px 5px;
+    width: 170px;
+    border-radius: 4px;
+    background-color: blue;
+    padding: 10px;
+    grid-template-areas:
+    ". . ."
+    ". . .";
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+p {
+    font-size: 20px;
+}
+.damage::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/stats/damage.png");
+    display: inline-block;
+    background-size: cover;
+    margin-left:5px;
+}
+.attackspeed::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/stats/attackspeed.png");
+    display: inline-block;
+    background-size: cover;
+    margin-left:5px;
+}
+.lifesteal::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/stats/lifesteal.png");
+    display: inline-block;
+    background-size: cover;
+    margin-left:5px;
+}
+.shield::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/stats/shield.png");
+    display: inline-block;
+    background-size: cover;
+    margin-left:5px;
+}
+.inline {
+    display: inline;
+}
+.hp::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/stats/hp.png");
+    display: inline-block;
+    background-size: cover;
+    margin-left:5px;
+}
+.truedamage {
+    color: white;
+    &::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        color: white;
+        display: inline-block;
+        background-size: cover;
+    }
+}
+.stats_container {
+    background-color: #555;
+    width: 360px;
+    padding: 10px 0;
+    border-radius: 10px;
+}

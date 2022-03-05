@@ -1,0 +1,54 @@
+<br>
+<div class="container">
+    {{#each data}}
+<div class="stats_container">
+<div class="item_container">
+    {{#each this.itemIds}}
+        <img src="../images/item/{{this}}.png">
+    {{/each}}
+</div>
+    <h2>Health</h2>
+    <p class="hp">{{this.yasuoHealth}}</p>
+<h2>Damage Per Hit</h2>
+<p class="damage">{{this.yasuoDamage}}</p>
+<h2>Damage Per Second</h2>
+<p class="damage">{{this.yasuoDps}}</p>
+<h2>Attack Speed</h2>
+<p class="attackspeed">{{this.yasuoAttackSpeed}}</p>
+<h2>Life Steal</h2>
+<p class="lifesteal">{{this.yasuoLifeSteal}}</p>
+<h2>Life steal per Hit</h2>
+<p class="lifesteal">{{this.yasuoLifeStealPerHit}}</p>
+<h2>Life steal per Second</h2>
+<p class="lifesteal">{{this.yasuoLifeStealPerSecond}}</p>
+<h2>Passive Shield</h2>
+<p class="shield">{{this.yasuoPassiveShield}}</p>
+{{#if this.yasuoTrueDamage}}
+<h2>Kraken True Damage every 3rd hit</h2>
+<p class="truedamage">{{this.yasuoTrueDamage}}</p>
+<h2>Total Dps</h2>
+<p class="damage inline">{{this.yasuoDps}}</p><p class="inline"> + </p><span class="truedamage">{{this.krakenDps}}</span>
+{{/if}}
+    {{#if this.immortalShieldbowShield}}
+        <h2>Immortal Shieldbow Shield</h2>
+        <p class="shield">{{this.immortalShieldbowShield}}</p>
+    <h2>Total Shield</h2>
+    <p class="shield">{{this.totalShield}}</p>
+    {{/if}}
+</div>
+        {{/each}}
+</div>
+
+
+
+
+<!--yasuoDamage,-->
+<!--yasuoCritChance: critChance,-->
+<!--yasuoAttackSpeed: attackSpeed,-->
+<!--yasuoLifeSteal: lifeSteal,-->
+<!--yasuoTrueDamage: yasuoTrueDmg,-->
+<!--yasuoDps: Math.floor(attackSpeed * yasuoDamage),-->
+<!--yasuoLifeStealPerSecond: (attackSpeed * yasuoDamage) * lifeSteal,-->
+<!--yasuoPassiveShield: passiveShield,-->
+<!--immortalShieldbowShield: shieldbowShiled,-->
+<!--totalShield: passiveShield + shieldbowShiled-->
